@@ -52,26 +52,31 @@ public class Principal extends javax.swing.JFrame {
         js_Rniveldeseguridad = new javax.swing.JSpinner();
         jcanchas = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cb_Ccategoria = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jt_Cnombres = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jta_Cdireccion = new javax.swing.JTextArea();
+        jr_libre = new javax.swing.JRadioButton();
+        jr_reservado = new javax.swing.JRadioButton();
         jButton2 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
-        jSpinner4 = new javax.swing.JSpinner();
+        js_CnivelDeSeguridad = new javax.swing.JSpinner();
         jCasa = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
+        estado = new javax.swing.ButtonGroup();
+        jcarretera = new javax.swing.JDialog();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
 
         jLabel1.setText("Nombre del Lugar");
 
@@ -210,7 +215,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel6.setText("Categoria ");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Football", "Basquet", "Tenis", "Volley" }));
+        cb_Ccategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Football", "Basquet", "Tenis", "Volley" }));
 
         jLabel7.setText("Estado ");
 
@@ -218,15 +223,22 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel13.setText("Direccion");
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        jta_Cdireccion.setColumns(20);
+        jta_Cdireccion.setRows(5);
+        jScrollPane3.setViewportView(jta_Cdireccion);
 
-        jRadioButton1.setText("Libre");
+        estado.add(jr_libre);
+        jr_libre.setText("Libre");
 
-        jRadioButton2.setText("Reservada");
+        estado.add(jr_reservado);
+        jr_reservado.setText("Reservada");
 
         jButton2.setText("Agregar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jLabel14.setText("Nivel de Seguridad");
 
@@ -260,13 +272,13 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jcanchasLayout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
+                                .addComponent(jr_libre)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton2))
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jr_reservado))
+                            .addComponent(jt_Cnombres, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cb_Ccategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(js_CnivelDeSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jcanchasLayout.createSequentialGroup()
                         .addGap(135, 135, 135)
                         .addComponent(jButton2)))
@@ -278,7 +290,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jt_Cnombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jcanchasLayout.createSequentialGroup()
@@ -288,16 +300,16 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cb_Ccategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(js_CnivelDeSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jcanchasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(jr_libre)
+                    .addComponent(jr_reservado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(19, 19, 19))
@@ -322,6 +334,19 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(174, Short.MAX_VALUE))
         );
+
+        javax.swing.GroupLayout jcarreteraLayout = new javax.swing.GroupLayout(jcarretera.getContentPane());
+        jcarretera.getContentPane().setLayout(jcarreteraLayout);
+        jcarreteraLayout.setHorizontalGroup(
+            jcarreteraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jcarreteraLayout.setVerticalGroup(
+            jcarreteraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jMenuItem4.setText("jMenuItem4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -368,6 +393,19 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu4);
+
+        jMenu1.setText("Carretara");
+
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setText("Agregar Carretera");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
@@ -438,6 +476,35 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        String nombre1;
+        String direccion1;
+        int seguridad;
+        String categoria;
+        boolean estado = false;
+        
+        nombre1 = jt_Cnombres.getText();
+        direccion1 = jta_Cdireccion.getText();
+        seguridad = (Integer)(js_CnivelDeSeguridad.getValue());
+        categoria = (String)(cb_Ccategoria.getSelectedItem());
+        if (jr_libre.isSelected()) {
+            estado = true;
+        }else{
+            estado = false;
+        }
+        Cancha c = new Cancha(categoria, estado = false, nombre1, direccion1, seguridad);
+         lug.add(c);
+         System.out.println(lug);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        jcarretera.setModal(true);
+        jcarretera.pack();
+        jcarretera.setLocationRelativeTo(this);
+        jcarretera.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -474,11 +541,12 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cb_Ccategoria;
     private javax.swing.JComboBox<String> cb_Rcategoria;
+    private javax.swing.ButtonGroup estado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JDialog jCasa;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JDialog jCrear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -494,28 +562,32 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JDialog jRestaurante;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner4;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JDialog jcanchas;
+    private javax.swing.JDialog jcarretera;
     private javax.swing.JTextField jf_rNombre;
+    private javax.swing.JRadioButton jr_libre;
+    private javax.swing.JRadioButton jr_reservado;
+    private javax.swing.JSpinner js_CnivelDeSeguridad;
     private javax.swing.JSpinner js_Rclasificacion;
     private javax.swing.JSpinner js_Rniveldeseguridad;
+    private javax.swing.JTextField jt_Cnombres;
+    private javax.swing.JTextArea jta_Cdireccion;
     private javax.swing.JTextArea jta_Rdireccion;
     // End of variables declaration//GEN-END:variables
 ArrayList<Lugar> lug = new ArrayList();

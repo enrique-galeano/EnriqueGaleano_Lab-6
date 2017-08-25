@@ -11,17 +11,13 @@
 public class Carretera {
     private int numeroUnico;
     private int distancia;
-    private Lugar inicio;
-    private Lugar fin;
 
     public Carretera() {
     }
 
-    public Carretera(int numeroUnico, int distancia, Lugar inicio, Lugar fin) {
+    public Carretera(int numeroUnico, int distancia) {
         this.numeroUnico = numeroUnico;
         this.distancia = distancia;
-        this.inicio = inicio;
-        this.fin = fin;
     }
 
     public int getNumeroUnico() {
@@ -38,22 +34,6 @@ public class Carretera {
 
     public void setDistancia(int distancia) {
         this.distancia = distancia;
-    }
-
-    public Lugar getInicio() {
-        return inicio;
-    }
-
-    public void setInicio(Lugar inicio) {
-        this.inicio = inicio;
-    }
-
-    public Lugar getFin() {
-        return fin;
-    }
-
-    public void setFin(Lugar fin) {
-        this.fin = fin;
     }
 
     @Override

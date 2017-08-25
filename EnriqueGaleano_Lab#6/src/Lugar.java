@@ -15,8 +15,7 @@ public class Lugar {
     public String nombre;
     private String direccion;
     private int nivelDeSeguridad;
-    private ArrayList<Carretera> inicio = new ArrayList(); 
-    private ArrayList<Carretera> fin = new ArrayList();
+    
 
     public Lugar() {
     }
@@ -50,23 +49,6 @@ public class Lugar {
     public void setNivelDeSeguridad(int nivelDeSeguridad) {
         this.nivelDeSeguridad = nivelDeSeguridad;
     }
-
-    public ArrayList<Carretera> getInicio() {
-        return inicio;
-    }
-
-    public void setInicio(ArrayList<Carretera> inicio) {
-        this.inicio = inicio;
-    }
-
-    public ArrayList<Carretera> getFin() {
-        return fin;
-    }
-
-    public void setFin(ArrayList<Carretera> fin) {
-        this.fin = fin;
-    }
-
     @Override
     public String toString() {
         return nombre;
