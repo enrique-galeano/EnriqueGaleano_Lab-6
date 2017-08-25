@@ -38,7 +38,7 @@ public class Carretera {
 
     @Override
     public String toString() {
-        return "La distancia es "+ distancia;
+        return  distancia + "km";
     }
     
     

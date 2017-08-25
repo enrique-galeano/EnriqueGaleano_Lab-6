@@ -9,7 +9,7 @@
  * @author enriq
  */
 public class Cancha extends Lugar{
-    private String categoria;
+    private Object categoria;
     private boolean estado;
 
     public Cancha() {
@@ -22,7 +22,12 @@ public class Cancha extends Lugar{
         this.estado = estado;
     }
 
-    public String getCategoria() {
+    Cancha(Object categoria) {
+        this.categoria = categoria;
+    }
+
+
+    public Object getCategoria() {
         return categoria;
     }
 
