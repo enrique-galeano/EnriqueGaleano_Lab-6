@@ -8,6 +8,25 @@
  *
  * @author enriq
  */
-public class Casa {
+public class Casa extends Lugar{
+    private String categoriaDeLujos;
+
+    public Casa() {
+        super();
+    }
+
+    public Casa(String categoriaDeLujos, String nombre, String direccion, int nivelDeSeguridad) {
+        super(nombre, direccion, nivelDeSeguridad);
+        this.categoriaDeLujos = categoriaDeLujos;
+    }
+
+    public String getCategoriaDeLujos() {
+        return categoriaDeLujos;
+    }
+
+    public void setCategoriaDeLujos(String categoriaDeLujos) {
+        this.categoriaDeLujos = categoriaDeLujos;
+    }
+    
     
 }

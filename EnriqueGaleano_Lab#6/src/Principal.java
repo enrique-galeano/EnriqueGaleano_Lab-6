@@ -75,6 +75,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jf_rNombre1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        cb_Rcategoria1 = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        js_Rclasificacion1 = new javax.swing.JSpinner();
+        jLabel24 = new javax.swing.JLabel();
+        js_Rniveldeseguridad1 = new javax.swing.JSpinner();
         estado = new javax.swing.ButtonGroup();
         jcarretera = new javax.swing.JDialog();
         jLabel17 = new javax.swing.JLabel();
@@ -354,6 +360,21 @@ public class Principal extends javax.swing.JFrame {
         jLabel22.setText("Nombre");
 
         jButton4.setText("Agregar Casas");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jLabel8.setText("Categoria");
+
+        cb_Rcategoria1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande ", "Chiquita", "De dos Pisos", "De un piso" }));
+
+        jLabel23.setText("Clasificacion ");
+
+        js_Rclasificacion1.setModel(new javax.swing.SpinnerNumberModel(0, null, 5, 1));
+
+        jLabel24.setText("Nivel de Seguridad");
 
         javax.swing.GroupLayout jCasaLayout = new javax.swing.GroupLayout(jCasa.getContentPane());
         jCasa.getContentPane().setLayout(jCasaLayout);
@@ -362,18 +383,38 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jCasaLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel21)
                     .addGroup(jCasaLayout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(77, 77, 77)
                         .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jf_rNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(180, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jCasaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jCasaLayout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jLabel24))
+                                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jCasaLayout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(cb_Rcategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jCasaLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(js_Rclasificacion1)
+                                            .addComponent(js_Rniveldeseguridad1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(73, 328, Short.MAX_VALUE))
+                    .addGroup(jCasaLayout.createSequentialGroup()
+                        .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addGroup(jCasaLayout.createSequentialGroup()
+                                .addComponent(jLabel22)
+                                .addGap(77, 77, 77)
+                                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jf_rNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(267, Short.MAX_VALUE))))
+            .addGroup(jCasaLayout.createSequentialGroup()
+                .addGap(213, 213, 213)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jCasaLayout.setVerticalGroup(
             jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,9 +427,21 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel21)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
+                .addGap(18, 18, 18)
+                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(cb_Rcategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(js_Rclasificacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jCasaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(js_Rniveldeseguridad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(jButton4)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(91, 91, 91))
         );
 
         jLabel17.setText("Numero Unico de la Carretera");
@@ -831,6 +884,31 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3MouseClicked
 
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+         String nombre;
+        String direccion;
+        int seguridad;
+        String categoria;
+        int clasificacion;
+
+        nombre = jf_rNombre1.getText();
+        direccion = jta_Rdireccion1.getText();
+        seguridad = (Integer) (js_Rniveldeseguridad1.getValue());
+        categoria = (String) (cb_Rcategoria1.getSelectedItem());
+        clasificacion = (Integer) (js_Rclasificacion1.getValue());
+
+        Casa r = new Casa(categoria, nombre, direccion, seguridad);
+        lug.add(r);
+        jf_rNombre.setText(" ");
+        jta_Rdireccion.setText(" ");
+        js_Rniveldeseguridad.setValue(0);
+        cb_Rcategoria.setSelectedItem(0);
+        js_Rclasificacion.setValue(0);
+        JOptionPane.showMessageDialog(this, "Se guardo con exito la casa");
+
+    }//GEN-LAST:event_jButton4MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -869,6 +947,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cb_Ccategoria;
     private javax.swing.JComboBox<String> cb_Rcategoria;
+    private javax.swing.JComboBox<String> cb_Rcategoria1;
     private javax.swing.ButtonGroup estado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -894,11 +973,14 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JDialog jListarJTree;
     private javax.swing.JDialog jListarenTabla;
@@ -934,7 +1016,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton jr_reservado;
     private javax.swing.JSpinner js_CnivelDeSeguridad;
     private javax.swing.JSpinner js_Rclasificacion;
+    private javax.swing.JSpinner js_Rclasificacion1;
     private javax.swing.JSpinner js_Rniveldeseguridad;
+    private javax.swing.JSpinner js_Rniveldeseguridad1;
     private javax.swing.JSpinner js_numeroUnico;
     private javax.swing.JTextField jt_Cnombres;
     private javax.swing.JTree jt_listaJtree;
